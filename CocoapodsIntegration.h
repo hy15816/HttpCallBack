@@ -148,6 +148,22 @@ pod ‘AFNetworking’, ‘~>0.1′     //使用大于等于0.1但小于1.0的�
 pod ‘AFNetworking’, ‘~>0′     //高于0的版本，写这个限制和什么都不写是一个效果，都表示使用最新版本
 
 
+
+
+
+2016.12.2
+遇到问题：[!] Unable to add a source with url `https://github.com/CocoaPods/Specs.git` named `master`.
+You can try adding it manually in `~/.cocoapods/repos` or via `pod repo add`.
+
+1.解决:尝试变换路径：sudo xcode-select -switch /Applications/Xcodexx/Xcode.app,装了多个Xcode导致路径变了，
+结果:未解决(确认只装了一个xcode)
+
+2.解决:pod repo add https://github.com/CocoaPods/Specs.git master
+结果:[!] /usr/bin/git clone master https://github.com/CocoaPods/Specs.git
+fatal: repository 'master' does not exist
+
+3.解决:pod install --verbose --no-repo-update
+结果:
  
  
  
