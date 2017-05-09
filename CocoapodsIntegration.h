@@ -166,24 +166,40 @@ fatal: repository 'master' does not exist
 结果:失败
 4.卸载重装
 
+2015-12-29 多云转晴 --yim4ever
  
  
  
  
  
+ 2017-5-9 gz.多云 --mxr_hy
+ 
+ 更新 gem 时失败
+ 安装 cocoapods 时 输入： sudo gem install cocoapods
+ 提示:ERROR:  While executing gem ... (OpenSSL::SSL::SSLError)
+    hostname "upyun.gems.ruby-china.org" does not match the server certificate
+    
+    解决办法 
+    1.查看 ruby源  :gem source -l
+    结果:*** CURRENT SOURCES ***
+
+https://ruby.taobao.org/
+
+ 2.移除 taobao 源     :gem source --remove https://ruby.taobao.org/
+ 3.添加 ruby0chaina源 :gem sources -a https://gems.ruby-china.org
+ 4.更新 gem :sudo gem update --system
+ 5.安装 cocoapods :sudo gem install cocoapods
+ 提示 ERROR:  While executing gem ... (Errno::EPERM)
+    Operation not permitted - /usr/bin/xcodeproj
+    解决:执行:sudo gem install -n /usr/local/bin cocoapods --pre
+    结果:成功.
+ 6. pod --version
+    结果: 1.2.1
+    
+    
+
  
  
  
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
-    2015-12-29 多云转晴 --yim4ever
  
  */
